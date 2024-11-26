@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  library-db:
+    image: postgres:14
+    container_name: library_manager
+    restart: always
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+    ports:
+      - "${DB_PORT}:5432"
+
+volumes:
+  postgres-data:
