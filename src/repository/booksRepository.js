@@ -11,8 +11,8 @@ class BookRepository{
             'INSERT INTO books (id, title, author) VALUES ($1, $2, $3) RETURNING *', 
             [book.id, book.title, book.author]
         )
-
+        return result.rows[0];
     }
 }
 
-module.exports=BookRepository
+module.exports = new BookRepository();

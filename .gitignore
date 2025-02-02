@@ -1,2 +1,12 @@
 /node_modules
 .env
+
+.idea
+
+prettier.xml
+Project.xml
+Project_Default.xml
+vcs.xml
+modules.xml
+library-manager.iml
+codeStyleConfig.*

@@ -1,6 +1,7 @@
 const express = require('express');
-const booksRoutes = require('./routes/books');
+const booksRoutes = require('./routers/books');
 const { errorHandler } = require('./middleware/error-handler');
+const routes = require('./routers/index');
 
 const app = express();
 
@@ -8,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use('/api/books', booksRoutes);
+app.use(routes);
 
 // Error Handling
 app.use(errorHandler);
